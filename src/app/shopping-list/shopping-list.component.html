@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="options">
+        <button class="option">
+            <i class="fa fa-sort"></i> Sort
+        </button>
+        <button class="option">
+            <i class="fa fa-filter"></i> Filters
+        </button>
+    </div>
+    <ul>
+        <li *ngFor="let item of items">
+            <div>
+                <img class="item-img" src="{{item.img_url}}">
+            </div>
+            <div class="title">
+                {{item.name | titlecase}}
+            </div>
+            <div class="pricing">
+                <span class="new-price">
+                    &#8377;{{item.price *(1- item.discount/100) | number: '1.0-0'}}
+                </span>
+                <span class="actual-price">
+                    &#8377;{{item.price}}
+                </span>
+                <span class="discount">
+                    {{item.discount}}% off
+                </span>
+            </div>
+            <div class="options">
+                <button class="add-cart" (click)="addItem(item.id)">Add to cart</button>
+            </div>
+        </li>
+    </ul>
+</div>

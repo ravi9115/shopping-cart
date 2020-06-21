@@ -1,0 +1,13 @@
+<div class="header">
+    <div class="company-logo">
+        <i class="fa fa-sun-o fa-2x yellow-icon" aria-hidden="true" ngbPopover="Popover content" popoverTitle="Simple Popover"></i>
+    </div>
+    <div class="search-container">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search white-icon"></i></button>
+    </div>
+    <div class="cart">
+        <i class="fa fa-shopping-cart fa-2x white-icon" aria-hidden="true"></i>
+        <span class='badge badge-warning' *ngIf="totalCount > 0" id='lblCartCount'> {{ totalCount }} </span>
+    </div>
+</div>

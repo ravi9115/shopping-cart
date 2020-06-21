@@ -1,0 +1,149 @@
+.container {
+    width: 100%;
+    overflow: hidden;
+    background: #dcdcdc;
+    margin: 0 auto;
+    /* padding: 20px; */
+    min-width: 320px;
+    padding-top: 52px;
+    padding-bottom: 18px;
+}
+
+.container ul {
+    padding: 0;
+    margin: 0;
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container ul li {
+    list-style: none;
+    float: left;
+    width: calc(20% - 22px);
+    background: #dcdcdc;
+    border: 1px solid #a9a9a9;
+    padding: 10px;
+    /* border-top: 1px solid #a9a9a9;
+    border-left: 1px solid #a9a9a9; */
+    
+}
+
+/* .container ul li:nth-child(-n+2) {
+    border-top: 1px solid #a9a9a9;
+}
+
+.container ul li:nth-child(odd) {
+    border-left: 1px solid #a9a9a9;
+}
+
+.container ul li:nth-child(-n+3) {
+    border-top: none;
+}
+
+.container ul li:first-child,
+.container ul li:nth-child(3n+1) {
+    border-left: none;
+} */
+
+.container ul li .title {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #696969;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 1025px) {
+    .container ul li {
+        width: calc(25% - 22px);
+    }    
+}
+
+@media screen and (max-width: 768px) {
+    .container ul li {
+        width: calc(33% - 22px);
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .container ul li {
+        width: calc(50% - 22px);
+    }    
+    .item-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container ul li {
+        width: calc(100% - 22px);
+    }
+    .item-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.options {
+    text-align: center;
+
+}
+
+.item-img {
+    width: 100%;
+    height: auto;
+}
+
+.pricing {
+    height: 30px;
+}
+
+.new-price {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.actual-price {
+    text-decoration: line-through;
+    font-weight: 600;
+    margin-right: 15px;
+    font-size: 15px;
+    color: darkgray;
+}
+
+.discount {
+    color: green;
+    font-weight: 600;
+}
+
+.add-cart {
+    background: orange;
+    border-radius: 25px;
+    width: 100px;
+    height: 25px;
+    font-weight: 600;
+    border: none;
+}
+
+.add-cart:hover {
+    transform: scale(1.03)
+}
+
+.add-cart:active {
+    transform: scale(.98)
+}
+
+.option {
+    width: 50%;
+    height: 50px;
+    background: gainsboro;
+    border: 0.5px solid darkgray;
+    font-weight: 700;
+    font-size: large;
+}
